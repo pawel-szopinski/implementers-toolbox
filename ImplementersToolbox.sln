@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementersToolbox", "ImplementersToolbox\ImplementersToolbox.csproj", "{5BF2DD31-BAA2-4135-8A73-EE39C351FDB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileCompare", "FileCompare\FileCompare.csproj", "{69730988-FAAD-4A93-9E84-8AA0232142D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppAutomation", "AppAutomation\AppAutomation.csproj", "{B6DBBC0A-3A91-4DC9-BBEC-B244C9A3D067}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BF2DD31-BAA2-4135-8A73-EE39C351FDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF2DD31-BAA2-4135-8A73-EE39C351FDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF2DD31-BAA2-4135-8A73-EE39C351FDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF2DD31-BAA2-4135-8A73-EE39C351FDB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69730988-FAAD-4A93-9E84-8AA0232142D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69730988-FAAD-4A93-9E84-8AA0232142D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69730988-FAAD-4A93-9E84-8AA0232142D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69730988-FAAD-4A93-9E84-8AA0232142D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6DBBC0A-3A91-4DC9-BBEC-B244C9A3D067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6DBBC0A-3A91-4DC9-BBEC-B244C9A3D067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6DBBC0A-3A91-4DC9-BBEC-B244C9A3D067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6DBBC0A-3A91-4DC9-BBEC-B244C9A3D067}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
