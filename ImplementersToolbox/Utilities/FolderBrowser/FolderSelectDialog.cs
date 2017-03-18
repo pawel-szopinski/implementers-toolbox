@@ -22,14 +22,15 @@ namespace ImplementersToolbox.Utilities.FolderBrowser
 		/// </summary>
 		public FolderSelectDialog()
 		{
-			ofd = new System.Windows.Forms.OpenFileDialog();
-
-			ofd.Filter = "Folders|\n";
-			ofd.AddExtension = false;
-			ofd.CheckFileExists = false;
-			ofd.DereferenceLinks = true;
-			ofd.Multiselect = false;
-		}
+            ofd = new OpenFileDialog()
+            {
+                Filter = "Folders|\n",
+                AddExtension = false,
+                CheckFileExists = false,
+                DereferenceLinks = true,
+                Multiselect = false
+            };
+        }
 
 		#region Properties
 
