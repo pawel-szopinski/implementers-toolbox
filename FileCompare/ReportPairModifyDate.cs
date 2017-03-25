@@ -77,7 +77,7 @@ namespace FileCompare
         {
             // Require both wkbs and wkb
             // If these vars are not declared, Excel instances do not close properly
-            Excel.Application xlApp = null;
+            Excel.Application xlApp;
             Excel.Workbooks xlWkbs = null;
             Excel.Workbook xlWkb = null;
 
@@ -95,14 +95,7 @@ namespace FileCompare
                 xlWkbs = xlApp.Workbooks;
                 xlWkb = xlWkbs.Open(fullPath, false, true);
 
-                if (xlWkb.BuiltinDocumentProperties("Last Save Time").Value.ToString() != "")
-                {
-                    return xlWkb.BuiltinDocumentProperties("Last Save Time").Value.ToString();
-                }
-                else
-                {
-                    return blank;
-                }
+                return xlWkb.BuiltinDocumentProperties("Last Save Time").Value.ToString() != "" ? xlWkb.BuiltinDocumentProperties("Last Save Time").Value.ToString() : blank;
             }
             catch
             {
