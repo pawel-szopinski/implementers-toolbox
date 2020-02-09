@@ -22,7 +22,7 @@ namespace FileCompare
             FileStream fs2 = null;
 
             // If any of the files does not exist return "issue"
-            if (_readResultWIN == notFound || _readResultOriginal == notFound)
+            if (ReadResultWIN == notFound || _readResultOriginal == notFound)
                 return issue;
 
             // Determine if the same file was referenced two times.
@@ -37,7 +37,7 @@ namespace FileCompare
             }
             catch
             {
-                _readResultWIN = cannotOpen;
+                ReadResultWIN = cannotOpen;
             }
 
             try
@@ -50,7 +50,7 @@ namespace FileCompare
             }
 
             // If any of the files cannot be open return "issue"
-            if (_readResultWIN == cannotOpen || _readResultOriginal == cannotOpen)
+            if (ReadResultWIN == cannotOpen || _readResultOriginal == cannotOpen)
                 return issue;
 
             // Check the file sizes. If they are not the same, the files 
@@ -58,7 +58,7 @@ namespace FileCompare
             if (fs1.Length != fs2.Length)
             {
                 // Save results
-                _readResultWIN = $"Different File Size (Bytes): {fs1.Length}";
+                ReadResultWIN = $"Different File Size (Bytes): {fs1.Length}";
                 _readResultOriginal = $"Different File Size (Bytes): {fs2.Length}";
 
                 // Close the file
@@ -91,11 +91,11 @@ namespace FileCompare
             // Otherwise, it is "False".
             if (file1Byte - file2Byte == 0)
             {
-                _readResultWIN = $"All Bytes Identical ({byteCounter})";
+                ReadResultWIN = $"All Bytes Identical ({byteCounter})";
                 _readResultOriginal = $"All Bytes Identical ({byteCounter})";
                 return yes;
             }
-            _readResultWIN = $"Found Difference in (Byte): {byteCounter}";
+            ReadResultWIN = $"Found Difference in (Byte): {byteCounter}";
             _readResultOriginal = $"Found Difference in (Byte): {byteCounter}";
             return no;
         }

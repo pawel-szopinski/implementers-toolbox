@@ -15,9 +15,9 @@ namespace FileCompare
         {
             if (FileExtension == ".pdf")
             {
-                if (_readResultWIN != notFound)
+                if (ReadResultWIN != notFound)
                 {
-                    _readResultWIN = GetModifyDatePdf(fullPathWIN);
+                    ReadResultWIN = GetModifyDatePdf(fullPathWIN);
                 }
 
                 if (_readResultOriginal != notFound)
@@ -28,9 +28,9 @@ namespace FileCompare
             else if (FileExtension == ".xls" || FileExtension == ".xlsx"
                      || FileExtension == ".xlsm" || FileExtension == ".xlsb" || FileExtension == ".csv")
             {
-                if (_readResultWIN != notFound)
+                if (ReadResultWIN != notFound)
                 {
-                    _readResultWIN = GetModifyDateExcel(fullPathWIN);
+                    ReadResultWIN = GetModifyDateExcel(fullPathWIN);
                 }
 
                 if (_readResultOriginal != notFound)
@@ -40,9 +40,9 @@ namespace FileCompare
             }
             else
             {
-                if (_readResultWIN != notFound)
+                if (ReadResultWIN != notFound)
                 {
-                    _readResultWIN = notSupported;
+                    ReadResultWIN = notSupported;
                 }
 
                 if (_readResultOriginal != notFound)
@@ -51,7 +51,7 @@ namespace FileCompare
                 }
             }
 
-            _match = CheckMatch(_readResultWIN, _readResultOriginal);
+            _match = CheckMatch(ReadResultWIN, _readResultOriginal);
         }
 
         protected override string CheckMatch(string readResultWIN, string readResultOriginal)
